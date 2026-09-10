@@ -1,4 +1,4 @@
-const SUPABASE_URL = '<SUPABASE_URL>';
+const SUPABASE_URL = 'https://lfcdpoketphakshzidmk.supabase.co';
 const SUPABASE_ANON_KEY = '<SUPABASE_ANON_KEY>';
 const API_BASE_URL = 'https://<DOMAIN>/api';
 
