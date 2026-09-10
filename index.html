@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Killer Game</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/dist/tailwind.output.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <main class="mx-auto max-w-3xl p-4 space-y-4">
+      <section id="lobby-view" class="view">
+        <h1 class="text-3xl font-bold">Killer Game</h1>
+        <p class="text-slate-300">Sign in, scan your task, and complete your round objectives.</p>
+        <button id="google-signin" class="rounded bg-blue-600 px-4 py-2">Sign in with Google</button>
+      </section>
+
+      <section id="scanner-view" class="view hidden">
+        <h2 class="text-xl font-semibold">Scan Task QR</h2>
+        <div id="qr-reader" class="rounded bg-slate-900 p-2"></div>
+      </section>
+
+      <section id="task-view" class="view hidden">
+        <h2 class="text-xl font-semibold">Task Detail</h2>
+        <p id="task-status">Waiting for task data...</p>
+        <input id="task-code" class="mt-2 w-full rounded border border-slate-700 bg-slate-900 p-2" placeholder="Enter code if required" />
+        <div class="mt-2 flex gap-2">
+          <button id="redeem-task" class="rounded bg-emerald-600 px-4 py-2">Confirm Task</button>
+          <button id="verify-code" class="rounded bg-amber-600 px-4 py-2">Submit Code</button>
+        </div>
+      </section>
+
+      <section id="dashboard-view" class="view hidden">
+        <h2 class="text-xl font-semibold">Live Dashboard</h2>
+        <ul id="assignment-feed" class="space-y-2"></ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="/scripts.js" defer></script>
+  </body>
+</html>
