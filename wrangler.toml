@@ -1,0 +1,11 @@
+name = "killer-game-api"
+main = "workers/src/index.ts"
+compatibility_date = "2026-09-10"
+
+routes = [
+  { pattern = "<DOMAIN>/api/*", zone_name = "<DOMAIN>" }
+]
+
+[vars]
+SUPABASE_URL = "<SUPABASE_URL>"
+ALLOWED_ORIGIN = "https://<DOMAIN>"

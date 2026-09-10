@@ -1,0 +1,21 @@
+{
+  "name": "killer-game",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./tailwind.css -o ./dist/tailwind.output.css --minify",
+    "build": "npm run build:css",
+    "dev": "npm run build:css && python3 -m http.server 4173",
+    "worker:dev": "wrangler dev",
+    "db:push": "supabase db push"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0",
+    "html5-qrcode": "^2.3.8"
+  },
+  "devDependencies": {
+    "supabase": "^2.39.2",
+    "tailwindcss": "^3.4.17",
+    "wrangler": "^4.59.1"
+  }
+}
